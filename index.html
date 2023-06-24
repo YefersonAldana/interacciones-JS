@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacciones js.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="body" class="">
+    <section id="interacciones">
+        <h2>INTERACCIONES Y MANIPULACIÓN DE HTML Y CSS CON JV</h2>
+        <button onclick="circulo()">CIRCULO</button>
+        <button onclick="rectangulo()">RECTANGULO</button>
+        <button onclick="degradado()">DEGRADADO</button>
+        <button onclick="ondas()">ONDAS</button>
+        <button onclick="gif()">GIF</button>
+        <button onclick="rombo()">ROMBO</button>
+        <button onclick="triangulo()">TRIANGULO</button>
+        <button onclick="panel_lateral()">PANEL LATERAL</button>
+        <button onclick="panel_superior()">PANEL SUPERIOR</button>
+        <button onclick="cambiar_bg()">FONDO</button>
+    </section>
+    <section id="cont-figura">
+        <div id="figura"></div>
+    </section>
+    <div id="panel-lateral" class="">
+        <button onclick="panel_lateral()" class="close">X</button>
+        <h3>Menu</h3>
+        <ul>
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Ventas</a>
+        </ul>
+    </div>
+    <div id="panel-superior" class="">
+        <button onclick="panel_superior()" class="close2">X</button>
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/y8B6-Eot9iI" title="opbluelock" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

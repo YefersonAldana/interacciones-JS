@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital@1&display=swap');
+/*este codigo se saco de google fonts
+sirve para poder escoger el tipo de letra lo saque 
+desde la web estaba dentro de una etiqueta <style></style>*/
+*{
+    font-family: 'Asap Condensed', sans-serif;
+    /*hasta aqui tocaria poner eso, el codigo de la linea 5 
+    tambien lo saque de la web donde decia "CSS rules to specify families"*/
+    margin: 0;
+    padding: 0;
+    font-weight: 40;
+}
+body{
+    width: 100% ;
+    min-height: 100vh;
+    text-align: center;
+    background: url("../img/kaneki.jpg");
+    background-size: cover;
+    transition: .3s;
+}
+
+
+
+body#body.bg2{
+    background: url('../img/barou.jpg');
+    background-size: cover;
+    transition: .5s;
+    /* Este codigo es para cabmiar el fondo*/
+}
+
+
+#interacciones{
+    width: 90%;
+    margin:  15px auto;
+    padding: 30px;
+    background: #0000009f;
+    -webkit-backdrop-filter: blur(5px); 
+    border-radius: 8px ;
+    border: 2px solid #3912e8;
+    backdrop-filter: blur(10px);
+}
+#interacciones h2 {
+    font-size: 1.5em;
+    color: #05a0ae;
+    margin-bottom: 5px;
+}
+#interacciones button{
+    width: 9%;
+    height: 9%;
+    background: black;
+    color: #05a0ae;
+    border-radius: 15px;
+    border: 2px solid;
+    margin: 5px 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    /* el rpg es para darle transparencia*/
+}
+.button {
+    transition-duration: 0.6s;
+}
+
+.button:hover {
+    background-color: #4abe4e;
+    color: #ffffff;
+}
+#cont-figura{
+    width: 90%;
+    margin:  15px auto;
+    padding: 30px;
+    background: #0000009f; ;
+    border-radius: 10px ;
+    border: 2px solid #3912e8;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+}
+#figura{
+    width: 300px;
+    height: 300px;
+    background: #0000009f;
+    margin: 40px auto;
+    transition: 1s;
+}
+#figura.circulo{
+    transform: rotate(-360deg);
+    border-radius:50%;
+    background: rgb(7, 15, 155);
+}
+#figura.rectangulo{
+    width: 600px;
+    background: #0000009f;
+    /* css gradient es una web en la que puedo buscar los 
+    degradados que me den la gana xd*/
+}
+#figura.degradado{
+    /*
+    background:linear-gradient
+    (to right, red,orange,
+    yellow,green,blue,indigo,violet);
+    asi queda "to right" hacia derecha, osea 
+    el degradado de izquierda a derecha, sino se 
+    pone eso seria de arriba hacia abajo.
+    */
+    background:linear-gradient(rgb(0, 38, 255), 
+    rgb(30, 0, 255),rgb(68, 0, 255),
+    rgb(136, 0, 255));
+    
+}
+#figura.ondas {
+    position: relative;
+    overflow: hidden;
+}
+
+#figura.ondas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #fcb6b6, #bf7fcc);
+    opacity: 0.2;
+    z-index: 1;
+    transform-origin: center bottom;
+    transform: scaleY(0.2) translateZ(0);
+    animation: wave-animation 1.5s ease-in-out infinite;
+}
+@keyframes wave-animation {
+    0% {
+        transform: scaleY(0) translateZ(0);
+    }
+
+    50% {
+        transform: scaleY(1) translateZ(0);
+    }
+
+    100% {
+        transform: scaleY(0) translateZ(0);
+    }
+}
+#figura.gif{
+    background-image: url("../img/nyancat.webp");
+}
+#figura.rombo{
+    width: 300px;
+    height: 300px;
+    background:linear-gradient(rgb(255, 0, 0), 
+    rgb(255, 38, 0),rgb(255, 64, 0),
+    rgb(255, 136, 0));
+    transform: rotate(45deg);
+}
+
+
+#figura.triangulo {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(25, 0, 255);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+
+
+#panel-lateral {
+    width: 380px;
+    height: 100%;
+    position: absolute;
+
+
+
+    /*left: 0px;*/
+
+    left: -500px;
+    top: 0;
+    background-color: #7234be;
+    z-index: 998;
+    padding-top: 50px;
+    padding-left: 30px;
+    transition: .5s;
+}
+
+#panel-lateral h3 {
+    color:  #0d0673;
+    text-align: left;
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+#panel-lateral a {
+    display: block;
+    padding: 9px;
+    width: 200px;
+    background: #0d0673;
+    color: #7234be;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+#panel-lateral a:hover {
+    background-color: #00adff;
+}
+
+#panel-lateral.active {
+    left: 0px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color:  #0d0673;
+    font-size: 3em;
+    background: #7234be;
+    border: none;
+    cursor: pointer;
+}
+#panel-superior{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: -1900px;
+    /* top: -1900px; */
+    background: url('../img/isagichil.gif');
+    background-size: cover;
+    padding-top: 10px;
+    padding-left: 10px;
+    transition: .5s;
+}
+
+#panel-superior.active2{
+    top: 0px;
+}
+
+
+.close2{
+    position: absolute;
+    top: 9px;
+    right: 50px;
+    color: #ffffff;
+    font-size: 3em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
